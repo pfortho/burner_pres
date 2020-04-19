@@ -1,0 +1,252 @@
+
+@import url(../../lib/font/source-sans-pro/source-sans-pro.css);
+@import url(white.css);
+@import url(/home/tfoerst/.lib/pandoc/boxes.css);
+@import url(/home/tfoerst/.lib/pandoc/tables.css);
+
+* {
+    box-sizing: border-box !important;
+    -webkit-box-sizing: border-box !important;
+    -moz-box-sizing: border-box !important;
+}
+
+@font-face {
+  font-family: "Futura Hv BT";
+  font-weight: bold;
+}
+
+/*********************************************
+ * GLOBAL STYLES
+ *********************************************/
+
+html, body {
+    background-color: #eeeeee;
+    background-image: url('images/logo_tuf.svg'), url('images/virtuhcon.png');
+    background-repeat: no-repeat;
+    background-position: top 1rem left 1rem, top 1rem right 1rem;
+    background-size: 5%, 8%;
+    height: 100%;
+    margin: 0;
+}
+
+/*
+#wrap {
+    min-height: -webkit-calc(100% - 100px);  
+    min-height: -moz-calc(100% - 100px);    
+    min-height: calc(100% - 100px);     
+}*/
+
+.reveal {  
+  font-family: "Futura Bk BT";
+  font-size: 25px; 
+  font-weight: normal;
+  color: #2f3033;
+  text-align: center;
+  vertical-align: middle; 
+  margin: 0;
+ }
+
+.reveal.slide .slides > section, .reveal.slide .slides > section > section {
+  min-height: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  position: absolute !important;
+  top: 0% !important;
+  align-items: center !important;
+}
+
+/*
+section {
+    height: 100% !important; 
+    min-height: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    position: absolute !important;
+    top: 3% !important;
+    align-items: center !important;
+}
+*/
+
+section > h1, section > h2 {
+  position: fixed ;
+  top: 0%;
+  left: 0;
+  text-align: left ;
+}
+
+
+
+
+/* -- not working -- 
+.print-pdf .reveal.slide .slides > section, .print-pdf .reveal.slide .slides > section, .print-pdf .reveal.slide .slides > section > section {
+  min-height: 770px !important; 
+  position: relative ;
+  top: 0 ;
+  margin-left: auto ;
+  margin-right: auto ;
+  left: 0 ;
+  right: 0 ;
+  text-align: center ;
+}
+*/
+
+/*********************************************
+ * HEADERS
+ *********************************************/
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+    font-weight: 400;
+    font-family: "Futura Hv BT";
+    text-align: left;
+}
+
+.reveal h1, .reveal h2 {
+    position: fixed;
+    top: -5%;
+    text-transform: capitalize;
+	color: rgb(0,100,170);
+    font-size: 1.7em;
+}
+
+.reveal h1.title{
+    position: relative;
+    text-align: center;
+    left: 0;
+    top: 0;
+	margin: 0 0 1rem 0;   
+    text-transform: uppercase;
+    font-size: 1.9em;
+}
+
+.reveal h3 {
+  font-size: 1.1em; }
+
+.reveal h4 {
+  font-size: 0.75em; }
+
+/*********************************************
+ * OTHER
+ *********************************************/
+.reveal p {
+    margin:0;
+    line-height: 1.2; 
+    text-align: left;
+}
+
+p.author {
+    background-color: #0064aa;
+    color: #ffffff;
+    text-align: left;
+    text-indent: 1em;
+    margin: 0;
+    width: 100%;
+}
+
+p.date {
+    background-color: #0064aa;
+    color: #ffffff;
+    text-align: left;
+    text-indent: 1em;
+    margin: 0;
+    width: 100%;
+}
+
+.reveal hr {
+  display: block;
+  margin: 1px 0;
+  max-width: 1000em;
+}
+
+.reveal small {
+  font-size: 0.9em;
+  line-height: 1.1em;
+  vertical-align: bottom; 
+}
+
+.reveal small * {
+  font-size: 0.75em; }
+
+/*********************************************
+ * IMAGES
+ *********************************************/
+.reveal section img {
+  border: 0px solid #222; }
+
+/*********************************************
+ * NAVIGATION CONTROLS
+ *********************************************/
+.reveal .slide-number {
+    position: absolute;
+    width: 4rem;
+    height: 3rem;
+    left: 0%;
+    bottom: 0%;
+    text-align: center;
+    background-color: rgba(0,0,0,0.15);
+}
+
+.slide-number-a {
+    color: rgba(0,100,170,1);
+    font-size: 25pt;
+}
+
+/*********************************************
+ * FOOTER
+ *********************************************/
+section > footer {
+   position: fixed;
+   text-align: left !important;
+   display: table;
+   font-size: 75%;
+   width: 100%;
+   bottom: 0;
+   left: 3%;
+   color: #2f3033;
+ }
+
+footer p {
+    text-align: left !important;
+    margin: 0;
+}
+
+/*********************************************
+ * COLUMNS
+ *********************************************/
+
+div.column {
+    border-color: #eeeeee;
+}
+
+.reveal figure {
+    margin: 0;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.reveal figcaption {
+    text-align: center;
+    font-size: 0.9em;
+}
+
+div.references {
+    font-size: 0.7em !important;
+}
+
+/*********************************************
+ * PRINT BACKGROUND
+ *********************************************/
+@media print {
+    .backgrounds {
+        background-color: #fff; } 
+    .reveal.slide .slides > section, .print-pdf .reveal.slide .slides > section, .print-pdf .reveal.slide .slides > section > section {
+  min-height: 770px !important; 
+  position: relative ;
+  }
+}
+
